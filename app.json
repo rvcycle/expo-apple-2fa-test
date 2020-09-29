@@ -17,7 +17,8 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "org.jakewood.apple-2fa-tester"
     },
     "web": {
       "favicon": "./assets/favicon.png"
