@@ -1,4 +1,4 @@
-name: Test expo-apple-2fa
+name: integration
 
 on: [push, workflow_dispatch]
 
