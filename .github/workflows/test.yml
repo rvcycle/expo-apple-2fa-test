@@ -17,7 +17,6 @@ jobs:
           expo-cache: true
       - uses: jakemwood/expo-apple-2fa@main
         with:
-          expo_arguments: '--type simulator'
           expo_apple_id: ${{ secrets.APPLE_ID }}
           expo_apple_password: ${{ secrets.APPLE_PASSWORD }}
           tfa_phone_number: ${{ secrets.TWO_FACTOR_PHONE_NUMBER }}
