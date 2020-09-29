@@ -6,10 +6,19 @@ jobs:
   test_two_factor:
     runs-on: macos-latest
     steps:
-        - uses: jakemwood/expo-apple-2fa@main
-          with:
-            expo_arguments: '--type simulator'
-            expo_apple_id: ${{ secrets.APPLE_ID }}
-            expo_apple_password: ${{ secrets.APPLE_PASSWORD }}
-            tfa_phone_number: ${{ secrets.TWO_FACTOR_PHONE_NUMBER }}
-            app_specific_password: ${{ secrets.APP_SPECIFIC_PASSWORD }}
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+      - uses: expo/expo-github-action@v5
+        with:
+          expo-version: 3.x
+          expo-username: ${{ secrets.EXPO_USERNAME }}
+          expo-password: ${{ secrets.EXPO_PASSWORD }}
+          expo-cache: true
+      - uses: jakemwood/expo-apple-2fa@main
+        with:
+          expo_arguments: '--type simulator'
+          expo_apple_id: ${{ secrets.APPLE_ID }}
+          expo_apple_password: ${{ secrets.APPLE_PASSWORD }}
+          tfa_phone_number: ${{ secrets.TWO_FACTOR_PHONE_NUMBER }}
+          app_specific_password: ${{ secrets.APP_SPECIFIC_PASSWORD }}
