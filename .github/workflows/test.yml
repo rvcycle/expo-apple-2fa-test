@@ -6,7 +6,7 @@ jobs:
   test_two_factor:
     runs-on: macos-latest
     steps:
-        - uses: jakemwood/expo-apple-2fa
+        - uses: jakemwood/expo-apple-2fa@main
           with:
             expo_arguments: '--type simulator'
             expo_apple_id: ${{ secrets.APPLE_ID }}
