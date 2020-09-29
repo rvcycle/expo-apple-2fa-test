@@ -18,7 +18,8 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "org.jakewood.apple-2fa-tester"
+      "bundleIdentifier": "org.jakewood.apple-2fa-tester",
+      "buildNumber": 2
     },
     "web": {
       "favicon": "./assets/favicon.png"
