@@ -16,7 +16,7 @@ jobs:
           expo-username: ${{ secrets.EXPO_USERNAME }}
           expo-password: ${{ secrets.EXPO_PASSWORD }}
           expo-cache: true
-      - uses: jakemwood/expo-apple-2fa@main
+      - uses: jakemwood/expo-apple-2fa@plugins
         with:
           expo_apple_id: ${{ secrets.APPLE_ID }}
           expo_apple_password: ${{ secrets.APPLE_PASSWORD }}

@@ -22,4 +22,3 @@ jobs:
       - run: expo build:ios --no-wait
         env:
           FORCE_COLOR: 1
-
