@@ -1,6 +1,6 @@
 [
     {
-        "name": "@expo-apple-2fa/google-cloud",
+        "name": "@expo-apple-2fa/twilio",
         "async": false
     }
 ]

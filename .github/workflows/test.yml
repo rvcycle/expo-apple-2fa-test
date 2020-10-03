@@ -1,6 +1,10 @@
 name: integration
 
-on: [workflow_dispatch]
+on:
+  workflow_dispatch:
+  push:
+    branches-ignore:
+      - 'main'
 
 jobs:
   test_two_factor:
@@ -22,3 +26,7 @@ jobs:
           expo_apple_password: ${{ secrets.APPLE_PASSWORD }}
           tfa_phone_number: ${{ secrets.TWO_FACTOR_PHONE_NUMBER }}
           app_specific_password: ${{ secrets.APP_SPECIFIC_PASSWORD }}
+        env:
+          TWILIO_ACCOUNT_SID: ${{ secrets.TWILIO_ACCOUNT_SID }}
+          TWILIO_AUTH_TOKEN: ${{ secrets.TWILIO_AUTH_TOKEN }}
+          TWILIO_FROM_NUMBER: ${{ secrets.TWILIO_FROM_NUMBER }}
