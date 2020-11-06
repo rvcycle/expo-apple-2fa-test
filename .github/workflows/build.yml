@@ -2,6 +2,9 @@ name: Regularly build app
 
 # Send the app to Expo to be built each month so we can always have a binary available to download
 on:
+  push:
+    branches: [master]
+  workflow_dispatch:
   schedule:
     - cron: '0 0 1 * *' 
 
